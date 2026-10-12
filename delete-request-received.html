@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Received — TacTicCube</title>
+<meta name="description" content="Your request to delete your child's TacTicCube data has been received.">
+<style>
+  :root {
+    --purple: #6c3fc5;
+    --pink: #ff4d8d;
+    --orange: #ff9d4d;
+    --yellow: #ffd23f;
+    --green: #3fd6a0;
+    --blue: #3f9dff;
+    --ink: #1f1a2e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: #fff;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--purple), var(--pink) 35%, var(--orange) 65%, var(--yellow));
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1.5rem 2.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .cube-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0 0;
+    flex-wrap: wrap;
+  }
+  .mini-cube {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
+  .c1 { background: var(--pink); }
+  .c2 { background: var(--yellow); }
+  .c3 { background: var(--green); }
+  .c4 { background: var(--blue); }
+  .c5 { background: var(--orange); }
+
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+  }
+  main a { color: var(--purple); }
+  .intro {
+    background: #f7f5fc;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid #ece7f7;
+    margin-bottom: 1.5rem;
+  }
+  .intro p:first-child { margin-top: 0; }
+  .intro p:last-child { margin-bottom: 0; }
+  p { line-height: 1.65; font-size: 1.05rem; }
+  footer {
+    background: var(--ink);
+    color: #cfc8e6;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  footer a { color: #fff; text-decoration: underline; }
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #ece7f7;
+    box-shadow: 0 2px 10px rgba(31,26,46,0.06);
+  }
+  .site-nav .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    flex-wrap: wrap;
+  }
+  .site-nav .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--purple);
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+  .site-nav .brand-cube {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--purple), var(--pink) 50%, var(--yellow));
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+  .site-nav li { margin: 0; }
+  .site-nav ul a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .site-nav ul a:hover { background: #f7f5fc; color: var(--purple); }
+  .site-nav ul a[aria-current="page"] { background: var(--purple); color: #fff; }
+  @media (max-width: 760px) {
+    .site-nav .nav-inner { justify-content: center; }
+    .site-nav ul { justify-content: center; }
+    .site-nav ul a { font-size: 0.88rem; padding: 0.35rem 0.65rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="brand" href="/"><span class="brand-cube" aria-hidden="true"></span>TacTicCube</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/terms">Terms of Service</a></li>
+      <li><a href="/kids-safety">Parent's Guide</a></li>
+      <li><a href="/delete-request">Delete My Child's Data</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Request Received</h1>
+  <div class="cube-row">
+    <div class="mini-cube c1"></div>
+    <div class="mini-cube c2"></div>
+    <div class="mini-cube c3"></div>
+    <div class="mini-cube c4"></div>
+    <div class="mini-cube c5"></div>
+  </div>
+</div>
+
+<main>
+  <div class="intro">
+    <p>Thank you — we've received your request and will process it within a few business days. If you have questions in the meantime, email <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>.</p>
+  </div>
+  <p><a href="/">Back to TacTicCube</a></p>
+</main>
+
+<footer>
+  <p>TacTicCube is a product of MoonLight Industries, LLC.</p>
+  <p><a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Service</a> · <a href="/kids-safety">Parent's Guide</a> · <a href="/delete-request">Delete My Child's Data</a></p>
+  <p>© <span id="year">2026</span> MoonLight Industries, LLC. All rights reserved.</p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
