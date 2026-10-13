@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questions & Answers — TacTicCube</title>
+<meta name="description" content="Answers to common questions about TacTicCube — gameplay, pricing, privacy and safety, referrals, teachers, and more.">
+<style>
+  :root {
+    --purple: #6c3fc5;
+    --pink: #ff4d8d;
+    --orange: #ff9d4d;
+    --yellow: #ffd23f;
+    --green: #3fd6a0;
+    --blue: #3f9dff;
+    --ink: #1f1a2e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: #fff;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--purple), var(--pink) 35%, var(--orange) 65%, var(--yellow));
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1.5rem 2.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .hero p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    max-width: 640px;
+    margin: 0 auto;
+    opacity: 0.95;
+  }
+  .cube-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0 0;
+    flex-wrap: wrap;
+  }
+  .mini-cube {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
+  .c1 { background: var(--pink); }
+  .c2 { background: var(--yellow); }
+  .c3 { background: var(--green); }
+  .c4 { background: var(--blue); }
+  .c5 { background: var(--orange); }
+
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+  }
+  section { margin-bottom: 3rem; }
+  h2 {
+    color: var(--purple);
+    font-size: 1.7rem;
+    margin-bottom: 0.25rem;
+    border-bottom: 2px solid #ece7f7;
+    padding-bottom: 0.6rem;
+  }
+  .section-note {
+    font-style: italic;
+    color: #6b6480;
+    margin: 0.75rem 0 1.5rem;
+    font-size: 0.98rem;
+  }
+  h3 {
+    color: var(--pink);
+    font-size: 1.1rem;
+    margin: 1.6rem 0 0.4rem;
+  }
+  p, li { line-height: 1.65; font-size: 1.05rem; }
+  ul { padding-left: 1.4rem; }
+  li { margin-bottom: 0.35rem; }
+  main a { color: var(--purple); }
+  .intro {
+    background: #f7f5fc;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid #ece7f7;
+    margin-bottom: 2.5rem;
+  }
+  .intro p:first-child { margin-top: 0; }
+  .intro p:last-child { margin-bottom: 0; }
+  .coming-soon-badge {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    font-size: 0.7em;
+    font-weight: 700;
+    padding: 0.15em 0.6em;
+    border-radius: 999px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    text-shadow: none;
+  }
+  footer {
+    background: var(--ink);
+    color: #cfc8e6;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  footer a { color: #fff; text-decoration: underline; }
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #ece7f7;
+    box-shadow: 0 2px 10px rgba(31,26,46,0.06);
+  }
+  .site-nav .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    flex-wrap: wrap;
+  }
+  .site-nav .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--purple);
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+  .site-nav .brand-cube {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--purple), var(--pink) 50%, var(--yellow));
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+  .site-nav li { margin: 0; }
+  .site-nav ul a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .site-nav ul a:hover { background: #f7f5fc; color: var(--purple); }
+  .site-nav ul a[aria-current="page"] { background: var(--purple); color: #fff; }
+  @media (max-width: 760px) {
+    .site-nav .nav-inner { justify-content: center; }
+    .site-nav ul { justify-content: center; }
+    .site-nav ul a { font-size: 0.88rem; padding: 0.35rem 0.65rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="brand" href="/"><span class="brand-cube" aria-hidden="true"></span>TacTicCube</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/terms">Terms of Service</a></li>
+      <li><a href="/kids-safety">Parent's Guide</a></li>
+      <li><a href="/faq" aria-current="page">Q&amp;A</a></li>
+      <li><a href="/delete-request">Delete My Child's Data</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Questions &amp; Answers</h1>
+  <p>Everything you've been wondering about TacTicCube, in one place.</p>
+  <div class="cube-row">
+    <div class="mini-cube c1"></div>
+    <div class="mini-cube c2"></div>
+    <div class="mini-cube c3"></div>
+    <div class="mini-cube c4"></div>
+    <div class="mini-cube c5"></div>
+  </div>
+</div>
+
+<main>
+  <section>
+    <h2>Getting Started</h2>
+
+    <h3>What is TacTicCube, exactly?</h3>
+    <p>TacTicCube takes the tic-tac-toe game you already know and turns it into a real 3D puzzle. Instead of one flat grid, you're playing across a rotating cube — every face, every angle, every layer matters.</p>
+
+    <h3>How is it different from regular tic-tac-toe?</h3>
+    <p>Regular tic-tac-toe has one board and one way to win. TacTicCube gives you a whole cube to think about — pieces, rotation, and strategy across multiple faces at once. It's the same easy-to-learn idea, with a lot more room to get clever.</p>
+
+    <h3>What age range is it good for?</h3>
+    <p>TacTicCube is built to welcome a wide range of players — simple enough for a younger kid who's just learning strategy, with enough depth (the rotating cube, different game modes, and an AI that grows with you) to stay genuinely interesting for older kids, teens, and adults too.</p>
+
+    <h3>Can I play against a friend, or just the computer?</h3>
+    <p>Both. You can challenge the built-in AI at a difficulty that grows with you, or play head-to-head against a friend.</p>
+
+    <h3>What's the difference between the game modes and "growth levels"?</h3>
+    <p>Game modes change the rules or goal of a match. Growth levels adjust how challenging the built-in AI plays, so there's always a next step up as you improve.</p>
+  </section>
+
+  <section>
+    <h2>Pricing &amp; Purchases</h2>
+
+    <h3>Is TacTicCube free to play?</h3>
+    <p>Yes. The free version is fully playable, supported by ads on iOS/iPadOS (the Windows version has no ads at all).</p>
+
+    <h3>What do I get with Pro? What about SuperPro?</h3>
+    <p>Pro removes all ads and unlocks the ability to purchase SuperPro, which adds further features. SuperPro isn't sold on its own — Pro comes first.</p>
+
+    <h3>Are Pro and SuperPro subscriptions, or do I pay once?</h3>
+    <p>One-time purchases, not subscriptions. Buy once, and it's yours to keep — no recurring charges, nothing that renews automatically.</p>
+
+    <h3>Why is the price different in some countries?</h3>
+    <p>The cost of everyday goods and services varies a lot from country to country, so we adjust pricing in some regions to stay fair and accessible rather than charging a flat price that might be out of reach somewhere and barely noticeable somewhere else.</p>
+
+    <h3>Can I get a refund?</h3>
+    <p>All purchases go through Apple's App Store, so refunds are handled directly through Apple's own refund process — we never handle payment information ourselves.</p>
+  </section>
+
+  <section>
+    <h2>Privacy &amp; Safety</h2>
+
+    <h3>Does TacTicCube collect my child's personal information?</h3>
+    <p>No. No real name, no email, no phone number, no date of birth, no home address — none of it. The only identifying thing your child picks is a nickname, and it doesn't need to be their real name. See our full <a href="/privacy">Privacy Policy</a> for every detail.</p>
+
+    <h3>What is a UUID, and how safe is it, really?</h3>
+    <p>Every TacTicCube account gets a secret ID tag behind the scenes — think of it like a name tag with so many possible combinations that two people ever getting a matching one by pure chance is about as close to impossible as things get.</p>
+    <p>The clever part: your device can make this tag all by itself, instantly, with no internet connection and no one to ask permission from. It just picks one random tag out of an almost unimaginably huge pile of possible tags.</p>
+    <p>How huge? If every device on Earth started making a billion of these random tags every single second, it would take about 85 years of nonstop tag-making before there'd even be a 50-50 chance that any two ever matched by accident. That's the size of the safety margin we're talking about — and it's exactly why banks, hospitals, and huge tech companies all over the world trust this same method to keep track of things safely, even when millions of devices are making brand-new tags at the very same moment with nobody checking them against each other first.</p>
+    <p>So when TacTicCube gives your account one of these behind the scenes, you can feel confident it's really and truly yours — no matter how many other players there are.</p>
+
+    <h3>Can my child chat or talk with strangers in the app?</h3>
+    <p>No. TacTicCube doesn't have a chat or messaging feature of any kind — there's simply no way for your child to talk to another player, known or unknown, through the app.</p>
+
+    <h3>Does TacTicCube show ads? Are they safe for kids?</h3>
+    <p>On iOS and iPadOS, the free tier shows ads through a network built specifically for children's apps — no behavioral tracking, no following your child around the internet. Purchasing Pro removes ads entirely, and the Windows version never shows them at all.</p>
+
+    <h3>How do I delete my child's account and data?</h3>
+    <p>Visit our <a href="/delete-request">Delete My Child's Data</a> page any time, or email us directly at <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>. We'll take care of it promptly.</p>
+  </section>
+
+  <section>
+    <h2>Referrals &amp; Giving Back</h2>
+
+    <h3>What is the referral program, and how does it work?</h3>
+    <p>TacTicCube has a built-in referral system that rewards players for inviting others, built entirely on anonymous, encrypted codes — never on names or personal information.</p>
+
+    <h3>What is Camp Gratitude, and why is TacTicCube connected to it?</h3>
+    <p>Camp Gratitude is a nonprofit supporting veterans and military families. A portion of every referral reward is automatically donated to them, no matter what — it's built into how the program works, not an afterthought.</p>
+
+    <h3>Can my child actually earn real money from referrals?</h3>
+    <p>Real payouts require verified parental involvement before they're ever enabled — a child can't start collecting real money on their own. This keeps a parent in the loop for anything involving actual earnings.</p>
+  </section>
+
+  <section>
+    <h2>For Teachers <span class="coming-soon-badge">Coming Soon</span></h2>
+    <p class="section-note">We're actively building classroom support — here's what to expect once it's live.</p>
+
+    <h3>Can teachers use TacTicCube in the classroom?</h3>
+    <p>Yes — TacTicCube supports classroom use. A teacher sets up a classroom and gets a join code to share with students, who enter it once to join.</p>
+
+    <h3>How does a teacher see a student's progress?</h3>
+    <p>Once a student joins a teacher's classroom with the join code, their match results and progress become visible to that teacher — for educational purposes only, never shared any further.</p>
+
+    <h3>Does a teacher need special permission to use this with a class?</h3>
+    <p>Yes. When setting up a classroom, a teacher confirms they have the authorization they need from their school (and, where applicable, from parents) to use TacTicCube that way.</p>
+
+    <h3>Does a teacher get anything for setting up a classroom?</h3>
+    <p>Yes — a teacher who sets up a classroom gets a free copy of Pro as a thank-you, the same way many education tools offer teachers free or discounted access.</p>
+
+    <h3>Can a teacher earn referral commissions from their own students?</h3>
+    <p>No — and we've made that a firm rule on purpose. A teacher has real authority and trust with the kids in their classroom, and earning money every time one of those specific students upgrades would turn that trust into a financial incentive to encourage spending. That's not a position we're willing to put a teacher or their students in. A teacher is still welcome to refer other adults — friends, colleagues — the normal way; the rule only applies to their own students.</p>
+  </section>
+
+  <section>
+    <h2>Technical</h2>
+
+    <h3>What devices does TacTicCube work on?</h3>
+    <p>iPhone, iPad, and Windows, with more platforms possible down the road.</p>
+
+    <h3>Do I need an internet connection to play?</h3>
+    <p>No — matches are played locally on your device. An internet connection is only needed to sync your progress across your own devices or use certain online features.</p>
+
+    <h3>Will my progress carry over if I switch devices?</h3>
+    <p>Yes, as long as you're connected — TacTicCube syncs your progress securely so it follows you rather than staying stuck on one device.</p>
+  </section>
+
+  <section>
+    <h2>Trust</h2>
+
+    <h3>Who makes TacTicCube?</h3>
+    <p>TacTicCube is made by MoonLight Industries, LLC.</p>
+
+    <h3>How do I contact support?</h3>
+    <p>Email us anytime at <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <p>TacTicCube is a product of MoonLight Industries, LLC.</p>
+  <p><a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Service</a> · <a href="/kids-safety">Parent's Guide</a> · <a href="/faq">Q&amp;A</a> · <a href="/delete-request">Delete My Child's Data</a></p>
+  <p>© <span id="year">2026</span> MoonLight Industries, LLC. All rights reserved.</p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
