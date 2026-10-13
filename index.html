@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TacTicCube — A 3D Twist on a Classic</title>
 <meta name="description" content="TacTicCube is a colorful 3D tic-tac-toe game for the whole family, coming soon to iPhone, iPad, and Windows.">
+<meta property="og:title" content="TacTicCube — A 3D Twist on a Classic">
+<meta property="og:description" content="A colorful, three-dimensional twist on the classic tic-tac-toe — coming soon to iPhone, iPad, and Windows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tacticcubegame.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TacTicCube — A 3D Twist on a Classic">
+<meta name="twitter:description" content="A colorful, three-dimensional twist on the classic tic-tac-toe — coming soon to iPhone, iPad, and Windows.">
 <style>
   :root {
     --purple: #6c3fc5;
@@ -101,6 +108,48 @@
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 600;
+  }
+  .notify-form {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+  }
+  .notify-form input[type="email"] {
+    flex: 1 1 240px;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid #d9d1ee;
+    border-radius: 10px;
+    padding: 0.7rem 0.9rem;
+  }
+  .notify-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(108,63,197,0.18);
+  }
+  .notify-form button {
+    background: var(--purple);
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(108,63,197,0.3);
+    white-space: nowrap;
+  }
+  .notify-form button:hover { background: var(--pink); }
+  .hidden { display: none; }
+  .parent-note {
+    background: #f7f5fc;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #ece7f7;
   }
   footer {
     background: var(--ink);
@@ -237,6 +286,25 @@
       <span class="badge">iPhone</span>
       <span class="badge">iPad</span>
       <span class="badge">Windows</span>
+    </div>
+    <p>Want to know the moment it's available? Leave your email and we'll let you know — nothing else, no spam.</p>
+    <form class="notify-form" name="launch-notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/launch-notify-received">
+      <input type="hidden" name="form-name" value="launch-notify">
+      <p class="hidden">
+        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+      </p>
+      <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required autocomplete="email">
+      <button type="submit">Notify Me</button>
+    </form>
+  </section>
+
+  <section>
+    <div class="parent-note">
+      <p>
+        <strong>Parents:</strong> curious about how TacTicCube handles privacy and safety? Read our
+        <a href="/kids-safety">Parent's Guide</a>, or browse answers to common questions on our
+        <a href="/faq">Q&amp;A page</a>.
+      </p>
     </div>
   </section>
 
