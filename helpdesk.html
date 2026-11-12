@@ -188,6 +188,49 @@
   .say .label { font-weight: 700; color: #1f7a57; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.04em; }
   .facts { background: #f7f5fc; border-radius: 12px; padding: 1rem 1.25rem; border: 1px solid #ece7f7; }
   .facts li { margin-bottom: 0.25rem; }
+  html { scroll-behavior: smooth; }
+  main section, #topics { scroll-margin-top: 80px; }
+  .topics {
+    background: #f7f5fc;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #ece7f7;
+    margin-bottom: 2.5rem;
+  }
+  .topics h2 {
+    font-size: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0 0 0.75rem;
+  }
+  .topics ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .topics li { margin: 0; }
+  .topics a {
+    display: block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .topics a:hover, .topics a:focus { background: var(--purple); color: #fff; }
+  .back-to-top { margin-top: 1.5rem; font-size: 0.95rem; }
+  @media (max-width: 760px) {
+    main section, #topics { scroll-margin-top: 150px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
@@ -219,12 +262,22 @@
 </div>
 
 <main>
+  <nav class="topics" id="topics" aria-label="Help Desk topics">
+    <h2>Jump to a topic</h2>
+    <ul>
+      <li><a href="#free-pro-games">Free Pro Games from Ads</a></li>
+      <li><a href="#nicknames">Nicknames</a></li>
+      <li><a href="#deleting-data">Deleting a Child's Data</a></li>
+      <li><a href="#classrooms">Classrooms</a></li>
+    </ul>
+  </nav>
+
   <div class="intro">
     <p><strong>For the TacTicCube support team</strong> — and for any parent or player who'd like the details. Each topic explains how things work, then gives common questions with a suggested answer in a green box. Feel free to use those answers word for word.</p>
     <p>Can't find what you need? Email <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>. For general questions, see the <a href="/faq">Q&amp;A</a> and the <a href="/kids-safety">Parent's Guide</a>.</p>
   </div>
 
-  <section>
+  <section id="free-pro-games">
     <h2>Free Pro Games from Ads</h2>
     <p>Players on the free version can earn the occasional <strong>free Pro game</strong> by watching short, kid-safe ads. A free Pro game lets them pick any cube size (3×3×3, 4×4×4 or 5×5×5) for one match.</p>
 
@@ -258,9 +311,10 @@
 
     <h3>"Where is the Watch Ad button?"</h3>
     <div class="say"><p class="label">Suggested answer</p><p>The Watch Ad: Earn Points button is on the main screen of the free version on iPhone and iPad, near the bottom. If you've bought Pro, the button is gone because Pro has no ads and already includes everything a free game would unlock.</p></div>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="nicknames">
     <h2>Nicknames</h2>
     <p>Every player picks a fun nickname. It's the name other players see. We never ask for a real name.</p>
 
@@ -281,19 +335,22 @@
 
     <h3>"How do we change the nickname?"</h3>
     <div class="say"><p class="label">Suggested answer</p><p>Open Settings from the main screen, change the nickname, and tap Save.</p></div>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="deleting-data">
     <h2>Deleting a Child's Data</h2>
     <p>Parents can ask us to delete their child's TacTicCube data at any time.</p>
 
     <h3>"How do I delete my child's data?"</h3>
     <div class="say"><p class="label">Suggested answer</p><p>Please fill out our <a href="/delete-request">Delete My Child's Data</a> form, or email <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>. We'll take care of it promptly.</p></div>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="classrooms">
     <h2>Classrooms <span class="coming-soon-badge">Coming Soon</span></h2>
     <p>Teachers will be able to create a classroom and share a class code. Students ask to join with the code, and the teacher approves each one. The step-by-step student directions are on the <a href="/faq">Q&amp;A</a> page under "For Teachers." More support details will be added here when classrooms launch.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 </main>
 
