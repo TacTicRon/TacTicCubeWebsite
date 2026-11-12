@@ -177,6 +177,49 @@
     .site-nav ul { justify-content: center; }
     .site-nav ul a { font-size: 0.88rem; padding: 0.35rem 0.65rem; }
   }
+  html { scroll-behavior: smooth; }
+  main section, #topics { scroll-margin-top: 80px; }
+  .topics {
+    background: #f7f5fc;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #ece7f7;
+    margin-bottom: 2.5rem;
+  }
+  .topics h2 {
+    font-size: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0 0 0.75rem;
+  }
+  .topics ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .topics li { margin: 0; }
+  .topics a {
+    display: block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .topics a:hover, .topics a:focus { background: var(--purple); color: #fff; }
+  .back-to-top { margin-top: 1.5rem; font-size: 0.95rem; }
+  @media (max-width: 760px) {
+    main section, #topics { scroll-margin-top: 150px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
@@ -208,7 +251,20 @@
 </div>
 
 <main>
-  <section>
+  <nav class="topics" id="topics" aria-label="Q&amp;A topics">
+    <h2>Jump to a topic</h2>
+    <ul>
+      <li><a href="#getting-started">Getting Started</a></li>
+      <li><a href="#pricing">Pricing &amp; Purchases</a></li>
+      <li><a href="#privacy-safety">Privacy &amp; Safety</a></li>
+      <li><a href="#referrals">Referrals &amp; Giving Back</a></li>
+      <li><a href="#for-teachers">For Teachers</a></li>
+      <li><a href="#technical">Technical</a></li>
+      <li><a href="#trust">Trust</a></li>
+    </ul>
+  </nav>
+
+  <section id="getting-started">
     <h2>Getting Started</h2>
 
     <h3>What is TacTicCube, exactly?</h3>
@@ -225,9 +281,10 @@
 
     <h3>What's the difference between the game modes and "growth levels"?</h3>
     <p>Game modes change the rules or goal of a match. Growth levels adjust how challenging the built-in AI plays, so there's always a next step up as you improve.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="pricing">
     <h2>Pricing &amp; Purchases</h2>
 
     <h3>Is TacTicCube free to play?</h3>
@@ -244,9 +301,10 @@
 
     <h3>Can I get a refund?</h3>
     <p>All purchases go through Apple's App Store, so refunds are handled directly through Apple's own refund process — we never handle payment information ourselves.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="privacy-safety">
     <h2>Privacy &amp; Safety</h2>
 
     <h3>Does TacTicCube collect my child's personal information?</h3>
@@ -266,9 +324,10 @@
 
     <h3>How do I delete my child's account and data?</h3>
     <p>Visit our <a href="/delete-request">Delete My Child's Data</a> page any time, or email us directly at <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>. We'll take care of it promptly.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="referrals">
     <h2>Referrals &amp; Giving Back</h2>
 
     <h3>What is the referral program, and how does it work?</h3>
@@ -279,9 +338,10 @@
 
     <h3>Can my child actually earn real money from referrals?</h3>
     <p>Real payouts require verified parental involvement before they're ever enabled — a child can't start collecting real money on their own. This keeps a parent in the loop for anything involving actual earnings.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="for-teachers">
     <h2>For Teachers <span class="coming-soon-badge">Coming Soon</span></h2>
     <p class="section-note">We're actively building classroom support — here's what to expect once it's live.</p>
 
@@ -320,9 +380,10 @@
 
     <h3>Can a teacher earn referral commissions from their own students?</h3>
     <p>No — and we've made that a firm rule on purpose. A teacher has real authority and trust with the kids in their classroom, and earning money every time one of those specific students upgrades would turn that trust into a financial incentive to encourage spending. That's not a position we're willing to put a teacher or their students in. A teacher is still welcome to refer other adults — friends, colleagues — the normal way; the rule only applies to their own students.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="technical">
     <h2>Technical</h2>
 
     <h3>What devices does TacTicCube work on?</h3>
@@ -333,9 +394,10 @@
 
     <h3>Will my progress carry over if I switch devices?</h3>
     <p>Yes, as long as you're connected — TacTicCube syncs your progress securely so it follows you rather than staying stuck on one device.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="trust">
     <h2>Trust</h2>
 
     <h3>Who makes TacTicCube?</h3>
@@ -343,6 +405,7 @@
 
     <h3>How do I contact support?</h3>
     <p>Email us anytime at <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 </main>
 
