@@ -167,6 +167,49 @@
     .site-nav ul { justify-content: center; }
     .site-nav ul a { font-size: 0.88rem; padding: 0.35rem 0.65rem; }
   }
+  html { scroll-behavior: smooth; }
+  main section, #topics { scroll-margin-top: 80px; }
+  .topics {
+    background: #f7f5fc;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #ece7f7;
+    margin-bottom: 2.5rem;
+  }
+  .topics h2 {
+    font-size: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0 0 0.75rem;
+  }
+  .topics ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .topics li { margin: 0; }
+  .topics a {
+    display: block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .topics a:hover, .topics a:focus { background: var(--purple); color: #fff; }
+  .back-to-top { margin-top: 1.5rem; font-size: 0.95rem; }
+  @media (max-width: 760px) {
+    main section, #topics { scroll-margin-top: 150px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
@@ -198,17 +241,36 @@
 </div>
 
 <main>
+  <nav class="topics" id="topics" aria-label="Privacy Policy topics">
+    <h2>Jump to a topic</h2>
+    <ul>
+      <li><a href="#childrens-privacy">1. Kids' Privacy</a></li>
+      <li><a href="#what-we-collect">2. What We Collect</a></li>
+      <li><a href="#how-we-use">3. How We Use It</a></li>
+      <li><a href="#progress-reports">4. Progress Reports</a></li>
+      <li><a href="#referrals">5. Inviting Friends</a></li>
+      <li><a href="#ads">6. Ads</a></li>
+      <li><a href="#purchases">7. Buying &amp; Grown-Up Checks</a></li>
+      <li><a href="#storage">8. Where Info Is Kept</a></li>
+      <li><a href="#parent-rights">9. Parents' Rights</a></li>
+      <li><a href="#international">10. Other Countries</a></li>
+      <li><a href="#changes">11. Policy Changes</a></li>
+      <li><a href="#contact">12. Contact Us</a></li>
+    </ul>
+  </nav>
+
   <div class="intro">
     <p>MoonLight Industries, LLC ("we," "us," "our") operates TacTicCube, a 3D tic-tac-toe puzzle game for iOS, iPadOS, and Windows (the "App"). This Privacy Policy explains what information the App collects, how it's used, and the special protections in place for children, since TacTicCube is listed in Apple's Kids Category and designed for young players.</p>
     <p>If you have questions about this policy, contact us at <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>.</p>
   </div>
 
-  <section>
+  <section id="childrens-privacy">
     <h2>1. Our Commitment to Children's Privacy</h2>
     <p>TacTicCube is built on a simple principle: we don't need your child's personal information to let them play and learn. We comply with the Children's Online Privacy Protection Act (COPPA) and designed the App from the ground up to collect as little as possible.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="what-we-collect">
     <h2>2. Information We Collect</h2>
     <h3>What we DO NOT collect</h3>
     <p>TacTicCube never asks for, and does not collect:</p>
@@ -228,9 +290,10 @@
       <li><strong>Gameplay data:</strong> match results, win/loss record, and moves played, used to run the game itself and to power the teacher/parent progress-reporting feature described below.</li>
       <li><strong>A device-generated account identifier:</strong> an encrypted, randomly-generated ID (not tied to any personal information) used to sync a player's progress across devices and to support the in-house referral system.</li>
     </ul>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="how-we-use">
     <h2>3. How We Use Information</h2>
     <p>We use the information above only to:</p>
     <ul>
@@ -241,37 +304,43 @@
       <li>Provide customer support if a player or parent contacts us</li>
     </ul>
     <p>We do not use any information to build advertising profiles, and we do not sell information to anyone.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="progress-reports">
     <h2>4. Teacher and Parent Progress Reporting</h2>
     <p>TacTicCube supports classroom use. A teacher creates a classroom and receives a join code, which they share with their students. A student enters that code once to join; from that point on, their match results and progress are visible to that teacher for educational purposes only.</p>
     <p>When a teacher creates a classroom, they confirm that they have the necessary authorization from their school and/or their students' parents to use TacTicCube for this purpose — consistent with COPPA's provision allowing a school or teacher acting with school authorization to consent on behalf of parents for tools used strictly for school purposes. We use any data shared this way only for progress tracking within that classroom — never for advertising or any other commercial purpose, and never shared beyond that teacher.</p>
     <p>A parent who wants to see their own child's progress outside of a classroom setting can do so directly within the App, without any additional sharing step.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="referrals">
     <h2>5. Our Referral System</h2>
     <p>TacTicCube has an in-house referral system that rewards players for inviting others. It works entirely through encrypted, randomly-generated identifiers — never names, emails, or other personal information. One level of the referral chain is always donated to Camp Gratitude, a nonprofit supporting veterans and military families; other levels are only paid to referring players who hold an active Pro subscription, and a player may also choose to voluntarily donate their own earned share to Camp Gratitude. No child's personal information is ever shared with Camp Gratitude or anyone else as part of this system — only anonymized reward calculations.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="ads">
     <h2>6. Advertising</h2>
     <p>On iOS and iPadOS, the free tier shows ads served through SuperAwesome (Kids Web Services), an ad network built specifically for children's apps. These ads are contextual only — never based on behavioral tracking, interest profiles, or cross-app/cross-site tracking. The Windows version of TacTicCube does not show ads at all. Purchasing Pro removes all ads.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="purchases">
     <h2>7. In-App Purchases and Parental Gates</h2>
     <p>TacTicCube offers optional Pro and SuperPro purchases — one-time, not recurring — handled entirely through Apple's App Store (StoreKit) — we never directly process payment information ourselves. Apple's own purchase-protection features (such as Ask to Buy and Face ID/Touch ID confirmation) apply to any purchase made in the App.</p>
     <p>In addition, before starting a purchase, following a link outside the App, or sending a friend/referral invite, TacTicCube shows a parental gate: a simple math problem requiring a typed answer, deliberately designed to be easy for an adult and difficult for a young child to pass by guessing.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="storage">
     <h2>8. Where Information Is Stored</h2>
     <p>Gameplay and account data is stored using Supabase, a secure cloud database provider, accessed only over encrypted connections. We do not use any third-party analytics or tracking SDKs.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="parent-rights">
     <h2>9. Your Rights as a Parent</h2>
     <p>You can, at any time:</p>
     <ul>
@@ -281,24 +350,28 @@
       <li>Refuse further collection of your child's information</li>
     </ul>
     <p>To exercise any of these rights, email <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a> from the email address associated with your request, and we will respond promptly. You can also submit a deletion request directly through our <a href="/delete-request">Delete My Child's Data</a> form.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="international">
     <h2>10. International Players</h2>
     <p>TacTicCube is available worldwide, including in regions with their own children's privacy laws (such as the EU's GDPR-K). We apply the protections in this policy to all players regardless of location.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="changes">
     <h2>11. Changes to This Policy</h2>
     <p>If we make material changes to this policy, we will update the "Last updated" date above and, where appropriate, notify players/parents within the App.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>12. Contact Us</h2>
     <p>
       <strong>MoonLight Industries, LLC</strong><br>
       Email: <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>
     </p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 </main>
 
