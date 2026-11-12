@@ -152,6 +152,49 @@
     .site-nav ul { justify-content: center; }
     .site-nav ul a { font-size: 0.88rem; padding: 0.35rem 0.65rem; }
   }
+  html { scroll-behavior: smooth; }
+  main section, #topics { scroll-margin-top: 80px; }
+  .topics {
+    background: #f7f5fc;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #ece7f7;
+    margin-bottom: 2.5rem;
+  }
+  .topics h2 {
+    font-size: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0 0 0.75rem;
+  }
+  .topics ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .topics li { margin: 0; }
+  .topics a {
+    display: block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .topics a:hover, .topics a:focus { background: var(--purple); color: #fff; }
+  .back-to-top { margin-top: 1.5rem; font-size: 0.95rem; }
+  @media (max-width: 760px) {
+    main section, #topics { scroll-margin-top: 150px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
@@ -183,22 +226,43 @@
 </div>
 
 <main>
+  <nav class="topics" id="topics" aria-label="Terms of Service topics">
+    <h2>Jump to a topic</h2>
+    <ul>
+      <li><a href="#the-app">1. The App</a></li>
+      <li><a href="#accounts">2. Accounts &amp; Nicknames</a></li>
+      <li><a href="#purchases">3. Buying Things</a></li>
+      <li><a href="#referrals">4. Inviting Friends</a></li>
+      <li><a href="#classroom">5. Playing at School</a></li>
+      <li><a href="#acceptable-use">6. Rules to Follow</a></li>
+      <li><a href="#ownership">7. Who Owns TacTicCube</a></li>
+      <li><a href="#disclaimers">8. What We Can't Promise</a></li>
+      <li><a href="#liability">9. Our Responsibility Limits</a></li>
+      <li><a href="#termination">10. If Rules Are Broken</a></li>
+      <li><a href="#changes">11. Changes to the Rules</a></li>
+      <li><a href="#governing-law">12. Which Laws Apply</a></li>
+      <li><a href="#contact">13. Contact Us</a></li>
+    </ul>
+  </nav>
+
   <div class="intro">
     <p>These Terms of Service ("Terms") govern the use of TacTicCube (the "App"), operated by MoonLight Industries, LLC ("MoonLight Industries," "we," "us," "our"). By downloading, installing, or using the App, you agree to these Terms.</p>
     <p>If you are under 18, a parent or legal guardian must agree to these Terms on your behalf. Because TacTicCube is designed for children, we've written these Terms with that in mind — see our <a href="/privacy">Privacy Policy</a> and <a href="/kids-safety">Parent's Guide</a> for how we handle children's information specifically.</p>
   </div>
 
-  <section>
+  <section id="the-app">
     <h2>1. The App</h2>
     <p>TacTicCube is a 3D tic-tac-toe puzzle game for iOS, iPadOS, and Windows, designed to help players of all ages — especially kids — practice math and strategic thinking.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="accounts">
     <h2>2. Accounts and Profiles</h2>
     <p>TacTicCube does not require creating an account with an email address or password. Players choose a nickname to play. Progress is tied to a randomly-generated, encrypted device identifier, not to any personal information. See our <a href="/privacy">Privacy Policy</a> for full details.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="purchases">
     <h2>3. Purchases</h2>
     <ul>
       <li><strong>Free tier:</strong> TacTicCube is free to play, supported by ads on iOS/iPadOS. The Windows version has no ads.</li>
@@ -207,9 +271,10 @@
       <li>All purchases are processed entirely through Apple's App Store (StoreKit) and are subject to Apple's own purchase and refund terms. We never directly collect or process your payment information.</li>
       <li>Before any purchase can begin, the App shows a parental gate (a simple math problem) in addition to Apple's own purchase protections, since TacTicCube is listed in Apple's Kids Category.</li>
     </ul>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="referrals">
     <h2>4. Referral Program</h2>
     <p>TacTicCube includes an in-house referral program that rewards players for inviting others to the App, built entirely on encrypted, anonymous identifiers (never personal information).</p>
     <ul>
@@ -220,14 +285,16 @@
       <li>We may change, suspend, or discontinue the referral program, or adjust its terms (including the holding period), at any time.</li>
       <li>Any attempt to manipulate, abuse, or defraud the referral program (such as fake accounts or self-referrals) may result in forfeiture of commissions and suspension of access to the App.</li>
     </ul>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="classroom">
     <h2>5. Classroom / Teacher Use</h2>
     <p>TacTicCube supports classroom use through a teacher-created classroom and join code, described in our <a href="/kids-safety">Parent's Guide</a> and <a href="/privacy">Privacy Policy</a>. A teacher who creates a classroom represents that they have the necessary authorization from their school and/or their students' parents to use the App for this purpose, and agrees to use any student progress data made visible to them solely for that educational purpose.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="acceptable-use">
     <h2>6. Acceptable Use</h2>
     <p>You agree not to:</p>
     <ul>
@@ -237,44 +304,52 @@
       <li>Attempt to bypass the App's parental gates or age-appropriate protections</li>
       <li>Use the App in any way that could harm, disable, or interfere with its normal operation for other players</li>
     </ul>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="ownership">
     <h2>7. Intellectual Property</h2>
     <p>TacTicCube&trade;, its name, logo, and all associated content are owned by MoonLight Industries, LLC. TacTicCube&trade;, TacTic WordFun&trade;, TacTic Sum-It-Up&trade;, TacTic Sum-It-Up XL&trade;, TacTic TakeAway&trade;, TacTic TakeAway XL&trade; and TacTic MathemaTic&trade; are trademarks of MoonLight Industries, LLC. You may not use them without our written permission. These Terms don't grant you any ownership rights — only a limited, personal, non-transferable license to use the App for its intended purpose.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="disclaimers">
     <h2>8. Disclaimers</h2>
     <p>The App is provided "as is," without warranties of any kind, to the fullest extent permitted by law. We don't guarantee the App will be uninterrupted, error-free, or available at all times.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="liability">
     <h2>9. Limitation of Liability</h2>
     <p>To the fullest extent permitted by law, MoonLight Industries, LLC is not liable for any indirect, incidental, or consequential damages arising from your use of the App. Our total liability for any claim relating to the App is limited to the amount you paid us, if any, in the 12 months before the claim arose.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="termination">
     <h2>10. Termination</h2>
     <p>We may suspend or terminate access to the App for any player who violates these Terms, including through the acceptable-use restrictions in Section 6.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="changes">
     <h2>11. Changes to These Terms</h2>
     <p>We may update these Terms from time to time. If we make material changes, we'll update the "Last updated" date above and, where appropriate, notify players within the App.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="governing-law">
     <h2>12. Governing Law</h2>
     <p>These Terms are governed by the laws of the State of Minnesota, without regard to its conflict-of-laws principles.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>13. Contact Us</h2>
     <p>
       <strong>MoonLight Industries, LLC</strong><br>
       Email: <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>
     </p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 </main>
 
