@@ -146,6 +146,49 @@
     .site-nav ul { justify-content: center; }
     .site-nav ul a { font-size: 0.88rem; padding: 0.35rem 0.65rem; }
   }
+  html { scroll-behavior: smooth; }
+  main section, #topics { scroll-margin-top: 80px; }
+  .topics {
+    background: #f7f5fc;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #ece7f7;
+    margin-bottom: 2.5rem;
+  }
+  .topics h2 {
+    font-size: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0 0 0.75rem;
+  }
+  .topics ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .topics li { margin: 0; }
+  .topics a {
+    display: block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .topics a:hover, .topics a:focus { background: var(--purple); color: #fff; }
+  .back-to-top { margin-top: 1.5rem; font-size: 0.95rem; }
+  @media (max-width: 760px) {
+    main section, #topics { scroll-margin-top: 150px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
@@ -176,16 +219,31 @@
 </div>
 
 <main>
+  <nav class="topics" id="topics" aria-label="Parent's Guide topics">
+    <h2>Jump to a topic</h2>
+    <ul>
+      <li><a href="#never-ask">What we never ask for</a></li>
+      <li><a href="#what-we-collect">What we do collect, and why</a></li>
+      <li><a href="#gated">Purchases, links, and invites are gated</a></li>
+      <li><a href="#teachers">If your child's teacher uses TacTicCube in class</a></li>
+      <li><a href="#ads">Ads, if you're on the free tier</a></li>
+      <li><a href="#referrals">The referral system and Camp Gratitude</a></li>
+      <li><a href="#in-control">You're always in control</a></li>
+      <li><a href="#questions">Questions?</a></li>
+    </ul>
+  </nav>
+
   <div class="intro">
     <p>TacTicCube is a 3D twist on tic-tac-toe built to help kids practice math and strategic thinking — and we built it with your child's privacy as a starting principle, not an afterthought. Here's exactly what that means.</p>
   </div>
 
-  <section>
+  <section id="never-ask">
     <h2>What we never ask for</h2>
     <p>TacTicCube never collects your child's real name, email address, phone number, date of birth, or home address. There's no sign-up form, no account creation with personal details — just a nickname your child picks themselves (not required to be their real name).</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="what-we-collect">
     <h2>What we do collect, and why</h2>
     <ul>
       <li>A nickname your child chooses, so matches can show "whose turn it is."</li>
@@ -194,29 +252,34 @@
       <li>A randomly-generated account ID (not tied to any personal info) so progress syncs across your child's own devices.</li>
     </ul>
     <p>That's the whole list. No ad-tracking profiles, no data sold to anyone.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="gated">
     <h2>Purchases, links, and invites are gated</h2>
     <p>TacTicCube offers optional Pro and SuperPro upgrades, but every purchase goes through Apple's own App Store purchase system — meaning your existing Apple parental controls (Ask to Buy, Face ID/Touch ID confirmation) apply automatically. On top of that, before starting a purchase, opening any link outside the App, or sending a friend invite, TacTicCube shows a quick parental gate — a simple math problem your child would need to type the answer to, easy for an adult and deliberately awkward for a young child to pass by guessing.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="teachers">
     <h2>If your child's teacher uses TacTicCube in class</h2>
     <p>TacTicCube supports classroom use: a teacher sets up a classroom and gets a join code to share with their students. A student enters that code once to join, and from then on, their match progress is visible to that teacher — only for classroom/educational purposes, never for advertising, and never shared any further. When a teacher sets this up, they confirm they have the authorization they need from their school (and, where applicable, from parents) to use the App this way. If you'd rather just see your own child's progress yourself, you can do that directly in the App without any classroom setup at all.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="ads">
     <h2>Ads, if you're on the free tier</h2>
     <p>On iOS and iPadOS, the free version of TacTicCube shows ads through SuperAwesome (Kids Web Services), an ad network built specifically for children's apps — no behavioral targeting, no tracking your child across other apps or websites. The Windows version doesn't show ads at all. Purchasing Pro removes ads entirely.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="referrals">
     <h2>The referral system and Camp Gratitude</h2>
     <p>TacTicCube has a built-in referral system that rewards players for inviting friends. It runs entirely on anonymous, encrypted codes — never on your child's name or any personal information. One level of every referral reward always goes to Camp Gratitude, a nonprofit supporting veterans and military families, no matter what. The other levels are paid out to referring players, and a player can also choose to donate their own share to Camp Gratitude on top of that. No personal data about your child is ever part of any of this — just the reward amount itself.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="in-control">
     <h2>You're always in control</h2>
     <p>As a parent, you can ask us at any time to:</p>
     <ul>
@@ -225,11 +288,13 @@
       <li><a href="/delete-request">Delete your child's account and everything tied to it</a></li>
     </ul>
     <p>Just email <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a> and we'll take care of it promptly. You can also submit a request directly through our <a href="/delete-request">Delete My Child's Data</a> form.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 
-  <section>
+  <section id="questions">
     <h2>Questions?</h2>
     <p>Reach us anytime at <a href="mailto:support@tacticcubegame.com">support@tacticcubegame.com</a>. For the full legal details, see our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Service</a>.</p>
+    <p class="back-to-top"><a href="#topics">↑ Back to topics</a></p>
   </section>
 </main>
 
