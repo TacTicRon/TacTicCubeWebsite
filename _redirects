@@ -1,0 +1,10 @@
+# Send every extra domain to the main site (tacticcubegame.com), keeping the page path.
+# Restored 2026-11-21: the original file was lost when the site moved to GitHub (2026-10-12).
+https://tacticcubegame.games/*      https://tacticcubegame.com/:splat  301!
+https://www.tacticcubegame.games/*  https://tacticcubegame.com/:splat  301!
+http://tacticcubegame.games/*       https://tacticcubegame.com/:splat  301!
+http://www.tacticcubegame.games/*   https://tacticcubegame.com/:splat  301!
+https://tacticcube.games/*          https://tacticcubegame.com/:splat  301!
+https://www.tacticcube.games/*      https://tacticcubegame.com/:splat  301!
+http://tacticcube.games/*           https://tacticcubegame.com/:splat  301!
+http://www.tacticcube.games/*       https://tacticcubegame.com/:splat  301!
